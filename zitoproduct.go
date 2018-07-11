@@ -13,6 +13,6 @@ type ProductFace interface {
 }
 
 //AddProduct AddProduct
-func AddProduct(prefix string, face ProductFace) {
-	Products[prefix] = face
+func AddProduct(face ProductFace) {
+	Products[face.GetPrefix()] = face
 }
