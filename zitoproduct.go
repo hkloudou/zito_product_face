@@ -10,9 +10,17 @@ type ProductFace interface {
 	GetTitle() string
 	//BindControllers 绑定beego 控制器
 	BindControllers()
+	ReleaseViews()
 }
 
 //AddProduct AddProduct
 func AddProduct(face ProductFace) {
 	Products[face.GetPrefix()] = face
+}
+
+//ReleaseViews ReleaseViews
+func ReleaseViews() {
+	for _, v := range Products {
+		v.ReleaseViews()
+	}
 }
