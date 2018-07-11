@@ -24,3 +24,10 @@ func ReleaseViews() {
 		v.ReleaseViews()
 	}
 }
+
+//BindControllers BindControllers
+func BindControllers() {
+	for _, v := range Products {
+		v.BindControllers()
+	}
+}
