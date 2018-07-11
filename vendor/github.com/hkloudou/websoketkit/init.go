@@ -1,5 +1,0 @@
-package websoketkit
-
-func init() {
-
-}
